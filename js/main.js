@@ -5,6 +5,20 @@ var newMap
 var markers = []
 
 /**
+ * Add the service worker
+ */
+if ('serviceWorker' in navigator) {
+      navigator.serviceWorker
+      .register('/sw.js')
+      .then(reg => {
+        console.log('Registration worked: '+ reg.scope);
+      })
+      .catch(err => {
+        console.log('Registration failed: '+ err);
+      });
+}
+
+/**
  * Fetch neighborhoods and cuisines as soon as the page is loaded.
  */
 document.addEventListener('DOMContentLoaded', (event) => {
@@ -200,6 +214,7 @@ addMarkersToMap = (restaurants = self.restaurants) => {
   });
 
 } 
+
 /* addMarkersToMap = (restaurants = self.restaurants) => {
   restaurants.forEach(restaurant => {
     // Add marker to the map
