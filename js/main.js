@@ -1,3 +1,4 @@
+/* eslint-disable */
 let restaurants,
   neighborhoods,
   cuisines
@@ -9,7 +10,7 @@ var markers = []
  */
 if ('serviceWorker' in navigator) {
       navigator.serviceWorker
-      .register('/sw.js')
+      .register('./sw.js')
       .then(reg => {
         console.log('Registration worked: '+ reg.scope);
       })
