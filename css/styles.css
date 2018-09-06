@@ -45,7 +45,7 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
 
 #footer {
   background-color: #444;
-  color: #aaa;
+  color: #ccc;
   font-size: 8pt;
   letter-spacing: 1px;
   padding: 25px;
@@ -309,9 +309,13 @@ nav h1 a {
 }
 #reviews-list li {
   background-color: #fff;
-    border: 2px solid #f3f3f3;
-  display: block;
+  border: 2px solid #f3f3f3;
   list-style-type: none;
+  display: flex;
+  flex-direction:column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border: 2px solid grey;
   margin: 0 0 30px;
   overflow: hidden;
   padding: 0 20px 20px;
