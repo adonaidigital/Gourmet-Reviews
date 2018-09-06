@@ -1,4 +1,3 @@
-
 const cacheID = 'mws-app-1';
 
 let cacheFiles = [
@@ -23,16 +22,6 @@ let cacheFiles = [
  // call install event
 self.addEventListener('install', e => {
   // console.log('Service Worker: Installed');
-    // e.waitUntil(
-    //   caches.open(cacheID)
-    //   .then((cache) =>{
-    //     console.log(cache);
-    //     return cache.addAll(cacheFiles);
-    //   })
-    //   .catch(error => {
-    //     console.log(error);
-    //   })
-    // );
  });
 
  // call activate event
@@ -74,3 +63,8 @@ self.addEventListener('fetch', e => {
       .then(res => res)) 
   );
 });
+
+/*Referenced
+Doug Brown - walkthrough on Restaurant Reviews app(https://www.youtube.com/watch?v=92dtrNU1GQc)
+Travery Media -on Service worker (https://www.youtube.com/watch?v=ksXwaWHCW6k&feature=youtu.be)
+*/
