@@ -180,3 +180,14 @@ class DBHelper {
 
 }
 
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker
+  .register('./sw.js')
+  .then(reg => {
+    console.log('Registration worked: '+ reg.scope);
+  })
+  .catch(err => {
+    console.log('Registration failed: '+ err);
+  });
+}
+

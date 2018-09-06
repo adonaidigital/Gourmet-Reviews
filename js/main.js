@@ -6,7 +6,7 @@ var newMap
 var markers = []
 
 /**
- * Add the service worker
+ * Register the service worker
  */
 if ('serviceWorker' in navigator) {
       navigator.serviceWorker
